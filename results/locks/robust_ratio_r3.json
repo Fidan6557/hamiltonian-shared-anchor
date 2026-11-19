@@ -1,0 +1,159 @@
+{
+ "created_utc": "2026-11-19T18:18:04.769876+00:00",
+ "sha256": "020d90af5f9a",
+ "experiment": "robust_ratio_r3",
+ "entries": [
+  {
+   "B": 1800,
+   "a": 0.01,
+   "plan": "IP",
+   "est": "RICH",
+   "h1": 0.070711,
+   "h2": 0.212133,
+   "ell": 1.5,
+   "eta": 0.0001,
+   "val_logerr": -2.2092919495159276,
+   "evaluate": true
+  },
+  {
+   "B": 1800,
+   "a": 0.01,
+   "plan": "IP",
+   "est": "RICH",
+   "h1": 0.1,
+   "h2": 0.3,
+   "ell": 1.5,
+   "eta": 0.0001,
+   "val_logerr": -2.4217270061110594,
+   "evaluate": true
+  },
+  {
+   "B": 1800,
+   "a": 0.01,
+   "plan": "IP",
+   "est": "RICH",
+   "h1": 0.141422,
+   "h2": 0.424266,
+   "ell": 1.5,
+   "eta": 1e-05,
+   "val_logerr": -2.5531083018877263,
+   "evaluate": true
+  },
+  {
+   "B": 1800,
+   "a": 0.01,
+   "plan": "IP",
+   "est": "RICH",
+   "h1": 0.2,
+   "h2": 0.6000000000000001,
+   "ell": 1.5,
+   "eta": 1e-05,
+   "val_logerr": -2.7035339640945235,
+   "evaluate": true
+  },
+  {
+   "B": 1800,
+   "a": 0.01,
+   "plan": "IP",
+   "est": "RICH",
+   "h1": 0.282844,
+   "h2": 0.848532,
+   "ell": 1.15,
+   "eta": 1e-05,
+   "val_logerr": -2.8131407992106547,
+   "evaluate": true
+  },
+  {
+   "B": 1800,
+   "a": 0.01,
+   "plan": "SA",
+   "est": "RICH",
+   "h1": 0.070711,
+   "h2": 0.212133,
+   "ell": 1.5,
+   "eta": 0.0001,
+   "val_logerr": -2.3031719448130783,
+   "evaluate": true
+  },
+  {
+   "B": 1800,
+   "a": 0.01,
+   "plan": "SA",
+   "est": "RICH",
+   "h1": 0.1,
+   "h2": 0.3,
+   "ell": 1.5,
+   "eta": 1e-05,
+   "val_logerr": -2.4913778749903357,
+   "evaluate": true
+  },
+  {
+   "B": 1800,
+   "a": 0.01,
+   "plan": "SA",
+   "est": "RICH",
+   "h1": 0.141422,
+   "h2": 0.424266,
+   "ell": 1.5,
+   "eta": 1e-05,
+   "val_logerr": -2.718452485109131,
+   "evaluate": true
+  },
+  {
+   "B": 1800,
+   "a": 0.01,
+   "plan": "SA",
+   "est": "RICH",
+   "h1": 0.2,
+   "h2": 0.6000000000000001,
+   "ell": 1.5,
+   "eta": 1e-05,
+   "val_logerr": -2.8488558034915465,
+   "evaluate": true
+  },
+  {
+   "B": 1800,
+   "a": 0.01,
+   "plan": "SA",
+   "est": "RICH",
+   "h1": 0.282844,
+   "h2": 0.848532,
+   "ell": 1.15,
+   "eta": 1e-05,
+   "val_logerr": -2.9754009805106203,
+   "evaluate": true
+  }
+ ],
+ "best": [
+  {
+   "B": 1800,
+   "a": 0.01,
+   "plan": "IP",
+   "est": "RICH",
+   "h1": 0.282844,
+   "h2": 0.848532,
+   "ell": 1.15,
+   "eta": 1e-05,
+   "val_logerr": -2.8131407992106547,
+   "edge": true,
+   "constrained": {},
+   "eta_edge": false,
+   "ell_edge": true
+  },
+  {
+   "B": 1800,
+   "a": 0.01,
+   "plan": "SA",
+   "est": "RICH",
+   "h1": 0.282844,
+   "h2": 0.848532,
+   "ell": 1.15,
+   "eta": 1e-05,
+   "val_logerr": -2.9754009805106203,
+   "edge": true,
+   "constrained": {},
+   "eta_edge": false,
+   "ell_edge": true
+  }
+ ]
+}

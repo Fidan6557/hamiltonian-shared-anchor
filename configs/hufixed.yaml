@@ -1,0 +1,9 @@
+# Hu et al.'s fixed estimator settings (Matern-5/2, ell = 3 in raw coordinates, eta = 1e-9, no tuning)
+# applied to the double-pendulum single-interval data at one headline cell (test seeds).  Reference only:
+# shows what the untuned published settings do under noise; NOT a reproduction of Hu et al.
+main_config: configs/main_dp.yaml
+cell: [1800, 0.01]
+reps: 10
+hu_ell: 3.0
+hu_eta: 1.0e-9
+h: [0.05, 0.1, 0.2, 0.4, 0.8]

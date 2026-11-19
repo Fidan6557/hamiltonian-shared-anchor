@@ -1,0 +1,32 @@
+# Error decomposition at fixed starts (4 start sets x 12 noise draws), locked settings from main_dp.
+main_config: configs/main_dp.yaml
+cells: [[1800, 0.003], [1800, 0.01], [1800, 0.03]]
+n_startsets: 4
+n_draws: 12
+headline:
+  - {name: SI-MP,    plan: SI,  est: MP,   lock: [SI, MP], simex: true}
+  - {name: SI-DC,    plan: SI,  est: DC,   lock: [SI, DC]}
+  - {name: SA-RICH,  plan: SA,  est: RICH, lock: [SA, RICH]}
+  - {name: IP-RICH,  plan: IP,  est: RICH, lock: [IP, RICH]}
+  - {name: RA-RICH,  plan: RA,  est: RICH, lock: [RA, RICH]}
+  - {name: MS3-RICH, plan: MS3, est: RICH, lock: [MS3, RICH]}
+  - {name: SA-POOL,  plan: SA,  est: POOL, lock: [SA, POOL], simex: true}
+  - {name: SA-LONG,  plan: SA,  est: LONG, lock: [SA, LONG]}
+  # positive control: forward-difference anchoring (EIV bias O(sigma^2/h)) at a short interval
+  - {name: FWD-h0.1, plan: FWD, est: MP,   lock: [SI, MP], h_override: 0.1, simex: true}
+# mechanism set: common h1 and common (ell, eta) (taken from SA-RICH's lock entry at h1)
+mechanism_cells: [[1800, 0.01]]
+mechanism:
+  h1: 0.2
+  ref: [SA, RICH]
+  pipelines:
+    - {name: m-SI(h1),    plan: SI,   est: MP,   h_mult: 1.0}
+    - {name: m-SI(2h1),   plan: SI,   est: MP,   h_mult: 2.0}
+    - {name: m-SA-RICH,   plan: SA,   est: RICH}
+    - {name: m-IP-RICH,   plan: IP,   est: RICH}
+    - {name: m-RA-RICH,   plan: RA,   est: RICH}
+    - {name: m-MS3-RICH,  plan: MS3,  est: RICH}
+    - {name: m-MS3I-RICH, plan: MS3I, est: RICH}   # Hu Sec. 6.3 protocol (independent stride noise; 5 readings/unit)
+simex_cells: [[1800, 0.03]]
+n_simex_draws: 4
+simex_K: 4

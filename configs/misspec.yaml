@@ -1,0 +1,16 @@
+# Noise-model misspecification at one cell; methods keep the correctly-specified locks and assume
+# i.i.d. isotropic noise with known sigma.  tau: exp(-dt/tau) correlation = 0.5 at dt = 0.2.
+main_config: configs/main_dp.yaml
+cell: [1800, 0.03]
+reps: 8
+tau: 0.2885390082
+K: 4
+kappas: [0.5, 2.0]
+pipelines:
+  - {plan: SI,  est: MP, simex: true}
+  - {plan: SI,  est: DC}
+  - {plan: SA,  est: RICH, simex: true}
+  - {plan: IP,  est: RICH}
+  - {plan: MS3, est: RICH}
+  - {plan: SA,  est: POOL}
+  - {plan: SA,  est: GLS}

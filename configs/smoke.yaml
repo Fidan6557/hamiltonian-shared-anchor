@@ -1,0 +1,23 @@
+# Tiny end-to-end configuration (tests/CI): runs in well under 2 minutes on a laptop CPU.
+name: smoke
+system: {name: double_pendulum, e_max: -1.5, taper_start: 0.6}
+seed: 7
+kernel: se
+threads: 4
+eval:
+  val: {n_traj: 20, n_states: 10, t_max: 4.5}
+  test: {n_traj: 20, n_states: 10, t_max: 4.5}
+budgets: [120]
+noise_levels: [0.01]
+h_grid: [0.1, 0.2, 0.4]
+ells: [1.0]
+etas: [1.0e-6, 1.0e-4]
+h_min: [0.2]
+reps: {tune: 1, test: 2}
+test_all_h: [[SI, MP], [SA, RICH], [IP, RICH]]
+plans:
+  - {plan: SI, estimators: [MP, DC]}
+  - {plan: SA, estimators: [POOL, RICH, LONG]}
+  - {plan: IP, estimators: [POOL, RICH]}
+  - {plan: RA, estimators: [RICH]}
+  - {plan: MS3, estimators: [RICH]}

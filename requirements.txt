@@ -1,0 +1,9 @@
+# Exact pins (core). Verified in a fresh uv venv on Windows 11 / CPython 3.12.6.
+numpy==2.4.6
+scipy==1.16.2
+pandas==3.0.5
+matplotlib==3.10.7
+joblib==1.5.2
+PyYAML==6.0.3
+threadpoolctl==3.6.0
+pytest==8.2.2

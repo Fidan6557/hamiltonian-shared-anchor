@@ -1,0 +1,12 @@
+{
+ "lock_sha256": "eece7d7b6684",
+ "lock_created_utc": "2026-11-19T18:15:26.118286+00:00",
+ "python": "3.12.6",
+ "numpy": "2.4.6",
+ "scipy": "1.16.2",
+ "pandas": "3.0.5",
+ "linalg_backend": "torch",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "time_utc": "2026-11-19T18:15:28.843604+00:00",
+ "torch": "2.11.0+cpu"
+}

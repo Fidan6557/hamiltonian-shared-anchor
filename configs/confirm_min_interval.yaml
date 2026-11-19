@@ -1,0 +1,19 @@
+# Pre-registered confirmatory test (protocol: reports/confirmatory_min_interval_protocol_2026-11-19.md).
+name: confirm_min_interval
+main_config: configs/main_dp.yaml
+protocol_file: reports/confirmatory_min_interval_protocol_2026-11-19.md
+lock_sha256: 888a9b3d4758
+purpose: confirm                     # seeds (20261119, 13, rep, 0): never used before
+testset_purpose: confirm_testset     # fresh held-out test trajectories (seed purpose 102)
+testset: {n_traj: 300, n_states: 20, t_max: 9.5}
+B: 1800
+h_min: 0.4
+noise_levels: [0.001, 0.003, 0.01]
+reps: 20
+methods: [[SA, RICH], [SI, MP], [SI, DC]]
+comparisons:                         # [first, second, predicted direction of first/second]
+  - [SA-RICH, SI-MP, less]
+  - [SA-RICH, SI-DC, greater]
+alpha: 0.05
+bootstrap: 10000
+deviations: []

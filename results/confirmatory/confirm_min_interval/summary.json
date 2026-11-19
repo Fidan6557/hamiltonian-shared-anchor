@@ -1,0 +1,27 @@
+{
+ "protocol_file": "reports/confirmatory_min_interval_protocol_2026-11-19.md",
+ "protocol_sha256": "ce62121ba219f7a4f6055cef5a997b4e796398f366febcc9d8484c181dab0379",
+ "protocol_mtime_utc": "2026-11-19T19:43:21.892284+00:00",
+ "lock_sha256": "888a9b3d4758",
+ "run_started_utc": "2026-11-19T19:46:13.619192+00:00",
+ "analysis_utc": "2026-11-19T19:53:14.401460+00:00",
+ "min_spacing_all_rows": 0.4,
+ "h_min": 0.4,
+ "n_readings_all_rows": [
+  1800
+ ],
+ "n_rows": 180,
+ "n_failures": 0,
+ "n_jitter": 0,
+ "deviations": [],
+ "env": {
+  "python": "3.12.6",
+  "numpy": "2.4.6",
+  "scipy": "1.16.2",
+  "pandas": "3.0.5",
+  "linalg_backend": "torch",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "time_utc": "2026-11-19T19:53:14.677597+00:00",
+  "torch": "2.11.0+cpu"
+ }
+}

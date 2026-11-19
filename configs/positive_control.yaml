@@ -1,0 +1,16 @@
+# Stronger positive control for the measurement-error correction (added after the pre-registered
+# decomposition showed no detectable EIV bias even for forward-difference anchoring at (1800, 0.03, h=0.1)).
+# Forward-difference anchoring has Cov(U, W) = -Sigma/h, so its EIV bias grows like sigma^2/h.
+# B = 600, a = 0.1 (largest noise), h = 0.05 and 0.1414; (ell, eta) taken from SI-MP's lock entry at h = 0.141422.
+main_config: configs/main_dp.yaml
+out_name: posctrl
+cells: [[600, 0.1]]
+n_startsets: 4
+n_draws: 16
+headline:
+  - {name: FWD-h0.05,  plan: FWD, est: MP, lock: [SI, MP], h_override: 0.05, hp_from_h: 0.141422, simex: true}
+  - {name: FWD-h0.141, plan: FWD, est: MP, lock: [SI, MP], h_override: 0.141422, simex: true}
+  - {name: SI-MP-h0.141, plan: SI, est: MP, lock: [SI, MP], h_override: 0.141422, simex: true}
+simex_cells: [[600, 0.1]]
+n_simex_draws: 8
+simex_K: 6

@@ -1,0 +1,8 @@
+{
+ "lock_sha256": "888a9b3d4758",
+ "lock_created_utc": "2026-11-19T13:18:37.414861+00:00",
+ "test_rows_with_lock_sha": 13980,
+ "test_rows": 13980,
+ "test_started_utc": "2026-11-19T13:18:40.718670+00:00",
+ "lock_predates_test": true
+}

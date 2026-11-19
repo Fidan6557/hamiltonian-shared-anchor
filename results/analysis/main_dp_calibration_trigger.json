@@ -1,0 +1,58 @@
+{
+ "threshold": 1.1,
+ "cells": [
+  {
+   "a": 0.0,
+   "oracle_best": 0.0092765497320015,
+   "oracle_pipeline": "MS3-RICH",
+   "defaults": {
+    "SI-MP_h0.2": 1.84025921922267,
+    "MS3-RICH_h0.2": 1.0653417735895023
+   }
+  },
+  {
+   "a": 0.001,
+   "oracle_best": 0.01665847279763145,
+   "oracle_pipeline": "SI-DC",
+   "defaults": {
+    "SI-MP_h0.2": 1.2883180250099182,
+    "MS3-RICH_h0.2": 1.1526810594541645
+   }
+  },
+  {
+   "a": 0.003,
+   "oracle_best": 0.02285760053674495,
+   "oracle_pipeline": "MS3-RICH",
+   "defaults": {
+    "SI-MP_h0.2": 1.2156066656860522,
+    "MS3-RICH_h0.2": 1.0368358841714407
+   }
+  },
+  {
+   "a": 0.01,
+   "oracle_best": 0.037379077048399406,
+   "oracle_pipeline": "MS3-RICH",
+   "defaults": {
+    "SI-MP_h0.2": 1.2481026241514115,
+    "MS3-RICH_h0.2": 1.1043522323501918
+   }
+  },
+  {
+   "a": 0.03,
+   "oracle_best": 0.060321708866121704,
+   "oracle_pipeline": "MS3-RICH",
+   "defaults": {
+    "SI-MP_h0.2": 1.4054747894421644
+   }
+  },
+  {
+   "a": 0.1,
+   "oracle_best": 0.10751455017480455,
+   "oracle_pipeline": "MS3-RICH",
+   "defaults": {
+    "SI-MP_h0.2": 1.586197205689739
+   }
+  }
+ ],
+ "triggered": true
+}

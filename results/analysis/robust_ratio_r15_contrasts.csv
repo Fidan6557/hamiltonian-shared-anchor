@@ -1,0 +1,2 @@
+contrast,B,a,a_pipe,b_pipe,n,n_fail_a,n_fail_b,mean_logratio,median_logratio,win_frac_a,ci_lo,ci_hi,ratio,ratio_lo,ratio_hi,p_wilcoxon,p_holm
+P1_SA-RICH_vs_IP-RICH_same_h,1800,0.01,SA-RICH@0.4,IP-RICH@0.4,10,0,0,-0.2864397340252667,-0.2847073063949863,1.0,-0.3077565752291069,-0.26428026860421183,0.7509323328364262,0.7350942363776789,0.7677583309442064,0.001953125,0.001953125

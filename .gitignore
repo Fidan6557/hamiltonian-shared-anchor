@@ -1,0 +1,16 @@
+# Python build / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Manuscript under journal review: kept local until after submission/acceptance
+paper/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*

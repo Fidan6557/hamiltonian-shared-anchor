@@ -1,0 +1,8 @@
+# SIMEX 2x2: {h tuned for the naive estimator, h re-tuned for the corrected one} x {correction off, on}.
+main_config: configs/main_dp.yaml
+cells: [[1800, 0.03], [1800, 0.1]]
+pipelines: [{plan: SI, est: MP}, {plan: SA, est: RICH}, {plan: MS3, est: RICH}]
+K: 4
+zetas: [0.5, 1.0, 1.5, 2.0]
+reps_tune: 2
+reps_test: 10
