@@ -67,6 +67,8 @@ python -m hamsched.cli decompose --config configs/positive_control.yaml
 python scripts/phase0b_ell_probe.py                              # Phase 0b lengthscale probe
 # pre-registered minimum-interval confirmation (protocol in reports/, outputs in results/confirmatory/):
 python -m hamsched.cli confirm --config configs/confirm_min_interval.yaml
+# figures of the journal manuscript (read-only from results/; written to paper/figures/):
+python paper/make_figures.py
 ```
 
 `scripts/post_phaseB_chain.sh` runs everything after Phase B in the order used here; `scripts/run_all.sh` /
@@ -80,13 +82,21 @@ and the test suite ≈ 15 s.
 
 ## Results at a glance (details and caveats in reports/REPORT.md)
 
-* Shared anchor vs independent pairs at identical intervals: SA wins in all 12 (budget, noise) cells
-  (error ratio 0.67–0.92), because of the shared reading itself (measured error correlation +0.46).
-* Shared anchor vs a tuned single interval: SA loses in all 12 cells (ratio 1.06–1.39).
-* Using all three pairs of the same readings (multistride Richardson) is the best 3-reading estimator and
-  ties or modestly beats a single interval with model-based defect correction in 11 of 12 cells.
-* No detectable measurement-error bias: the Hamiltonian constraint removes the anchor–velocity EIV term for
-  isotropic noise (docs/theory.md §7); known-Σ SIMEX only adds variance.
+* Shared anchor vs independent pairs at identical intervals: SA-RICH has lower error in all 12 (budget, noise)
+  cells (error ratio 0.67–0.92). The gain is also present without noise; the positive correlation between the
+  two stride fits (+0.46) is one mechanism under noise, not the whole explanation.
+* Shared anchor vs a tuned single interval with the interval chosen freely: SA-RICH has higher error in all 12
+  cells (ratio 1.06–1.39).
+* Minimum sampling interval h ≥ 0.4 (pre-registered confirmation; B = 1800, a = 0.001, 0.003, 0.01; 20 fresh
+  paired replicates and a fresh test set): SA-RICH has lower error than plain SI-MP (ratios 0.634–0.841) but
+  higher error than the defect-corrected SI-DC (ratios 1.191–1.226); all six predictions supported after Holm
+  adjustment. Not claimed for other budgets, intervals, noise levels or systems.
+* Using all three pairs of the same readings (multistride Richardson, MS3-RICH) is the best tested 3-reading
+  estimator and ties or modestly beats a single interval with model-based defect correction in 11 of 12 cells.
+* No remaining measurement-error bias was detectable above Monte Carlo error in the tested settings. For a single
+  forward-anchored pair under isotropic Gaussian noise the correlation term is orthogonal to Hamiltonian fields
+  (docs/theory.md §7); this does not remove all measurement-error bias. Known-Σ SIMEX increased test error by
+  4–32% in the ablation cells.
 * A 15% calibration set picked a good schedule and interval (regret 1.10–1.23 vs oracle; 5–25% better than
   fixed defaults).
 
@@ -101,4 +111,5 @@ tests/          unit tests, slope gates, Monte Carlo covariance checks, smoke pi
 results/        CSV/JSON results, locks, analysis tables      figures/  PNG figures generated from results
 reports/        REPORT.md (+ tables/)                          docs/     theory.md
 notebooks/      colab_wrapper.ipynb (installs the package and calls the same CLI)
+paper/          make_figures.py + figures/ for the journal manuscript (the manuscript itself is not included)
 ```

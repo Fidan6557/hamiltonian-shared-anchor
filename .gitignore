@@ -6,8 +6,11 @@ __pycache__/
 .venv/
 venv/
 
-# Manuscript under journal review: kept local until after submission/acceptance
-paper/
+# Manuscript under journal review: kept local until after submission/acceptance.
+# Only the figure script and the figures (generated from results/, no manuscript text) are published.
+paper/*
+!paper/make_figures.py
+!paper/figures/
 
 # OS / editor
 .DS_Store
